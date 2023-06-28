@@ -1,0 +1,14 @@
+@import 'assets/scss/main';
+
+html,
+body {
+    min-height: 100%;
+    color-scheme: light dark;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

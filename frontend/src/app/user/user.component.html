@@ -1,0 +1,7 @@
+<app-header />
+<ng-container>
+    <app-user-sidebar [open]="userSidebarOpen$ | async"/>
+    <app-search-sidebar [open]="searchSidebarOpen$ | async"/>
+</ng-container>
+<router-outlet />
+<app-footer />

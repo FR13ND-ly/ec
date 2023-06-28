@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 1rem;
+    width: calc(var(--lat-padding) * 2);
+    height: var(--u-header-height);
+    background-color: var(--wash);
+    border-radius: var(--radius);
+    transition: .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.sticked {
+    position: fixed;
+    top: 0;
+    transition-duration: .2s;
+    border-radius: 0 0 var(--radius) var(--radius);
+}

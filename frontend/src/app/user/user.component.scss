@@ -1,0 +1,11 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    padding: 
+        calc(var(--u-header-height) + 1rem) 
+        var(--lat-padding) 
+        0;
+    height: 300vh;
+}
