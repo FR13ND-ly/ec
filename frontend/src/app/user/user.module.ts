@@ -6,6 +6,7 @@ import { UserComponent } from './user.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './ui/header/header.component';
 import { FooterComponent } from './ui/footer/footer.component';
+import { MaterialModule } from '../core/modules/material.module';
 
 
 
@@ -19,8 +20,11 @@ import { FooterComponent } from './ui/footer/footer.component';
   ],
   imports: [
     CommonModule,
+    MaterialModule,
     RouterModule.forChild([
-      { path: '', component: UserComponent }
+      { path: '', component: UserComponent, children: [
+        { path: '', loadChildren: () => import('./landing-page/landing-page.module').then(m => m.LandingPageModule) },
+      ]}
     ])
   ]
 })

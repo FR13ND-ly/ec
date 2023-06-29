@@ -3,8 +3,8 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StoreModule } from '@ngrx/store';
-import { appStoreModule, reducers } from './state/app.store';
+import { appStoreModule } from './state/app.store';
+import { MaterialModule } from './core/modules/material.module';
 
 @NgModule({
   declarations: [

@@ -4,8 +4,12 @@
     box-sizing: border-box;
     position: relative;
     padding: 
-        calc(var(--u-header-height) + 1rem) 
+        calc(var(--u-header-height) + var(--gap) * 2) 
         var(--lat-padding) 
         0;
-    height: 300vh;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }

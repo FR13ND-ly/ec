@@ -1,0 +1,27 @@
+:host {
+    display: grid;
+    grid-template-rows: 72% auto;
+    gap: var(--gap);
+    width: 100%;
+    height: calc((100vh - var(--u-header-height)) - var(--gap) * 3);
+    
+}
+
+.slider {
+    height: 100%;
+    background-color: var(--surface-color);
+    border-radius: var(--radius);
+}
+
+.side {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+.article {
+    height: 100%;
+    background-color: var(--surface-color);
+    border-radius: var(--radius);
+    width: 100%;
+}
