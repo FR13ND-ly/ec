@@ -7,6 +7,7 @@ import { WidgetsSideComponent } from './widgets-side/widgets-side.component';
 import { EditorialsComponent } from './editorials/editorials.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { RouterModule } from '@angular/router';
+import { VideosComponent } from './videos/videos.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
     WidgetsSideComponent,
     EditorialsComponent,
     ArticlesComponent,
+    VideosComponent,
   ],
   imports: [
     CommonModule,

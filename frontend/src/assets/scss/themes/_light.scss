@@ -1,10 +1,10 @@
 :root {
     --text: #080c12;
     --background: #e6ecf4;
-    --primary-button: #2a3f60;
-    --secondary-button: #ffffff;
+    --primary: #2a3f60;
+    --secondary: #ffffff;
     --surface-color: #cecece;
     --wash: #3E4042;
     --accent: #324a71;
-    --overlay: hsla(0, 0%, 0%, 20%);
+    --overlay: hsla(0, 0%, 0%, var(--overlay-opacity));
 }

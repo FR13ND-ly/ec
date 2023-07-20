@@ -1,19 +1,34 @@
 .header {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    justify-content: space-between;
+    box-sizing: border-box;
     position: absolute;
+    padding: 0 1rem;
     top: 1rem;
     width: calc(100% - var(--lat-padding) * 2);
     height: var(--u-header-height);
     background-color: var(--wash);
     border-radius: var(--radius);
-    transition: .3s cubic-bezier(0, 0, .2, 1);
+    transition: border-radius .2s cubic-bezier(0, 0, .2, 1);
+    text-align: center;
+    span {
+      text-align: center;
+    }
+}
+
+.left-menu {
+  width: fit-content;
+}
+
+.right-menu {
+  display: flex;
+  gap: .5rem;
+  justify-content: right;
 }
 
 .sticked {
-    position: fixed;
-    top: 0;
-    transition-duration: .2s;
-    border-radius: 0 0 var(--radius) var(--radius);
+  position: fixed;
+  top: 0;
+  border-radius: 0 0 var(--radius) var(--radius);
 }

@@ -1,0 +1,66 @@
+:host {
+  display: grid;
+  gap: var(--gap);
+}
+
+.categories {
+  display: flex;
+  gap: calc(var(--gap) / 2);
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.category {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border-radius: 50vmax;
+  padding: .7rem 1.2rem;
+  background-color: var(--surface-color);
+  &--selected {
+    font-weight: bold;
+    background-color: var(--primary);
+    color: var(--on-primary);
+  }
+}
+
+.articles {
+  display: grid;
+  height: 80vh;
+  width: 100%;
+  border-radius: var(--radius);
+  gap: var(--gap);
+  grid-template-areas:
+    "med-1 feature feature"
+    "med-1 feature feature"
+    "med-1 feature feature"
+    "med-2 feature feature"
+    "med-2 small-1 small-2"
+    "med-2 small-1 small-2";
+}
+
+.feature {
+  grid-area: feature;
+}
+
+.med-1 {
+  grid-area: med-1;
+}
+
+.med-2 {
+  grid-area: med-2;
+}
+
+.small-1 {
+  grid-area: small-1;
+}
+
+.small-2 {
+  grid-area: small-2;
+}
+
+article {
+  background-color: var(--surface-color);
+  height: 100%;
+  width: 100%;
+  border-radius: var(--radius);
+}

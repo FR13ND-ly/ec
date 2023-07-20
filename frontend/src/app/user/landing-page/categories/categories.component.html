@@ -1,1 +1,12 @@
-<p>categories works!</p>
+<section class="categories">
+  <span class="category" [class.category--selected]="selectedIndex$() == i" (click)="onSelectCategory(i)" *ngFor="let category of categories; let i = index">
+    {{ category.showName }}
+  </span>
+</section>
+<section class="articles">
+  <article class="feature"></article>
+  <article class="med-1"></article>
+  <article class="med-2"></article>
+  <article class="small-1"></article>
+  <article class="small-2"></article>
+</section>

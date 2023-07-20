@@ -4,7 +4,8 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { appStoreModule } from './state/app.store';
-import { MaterialModule } from './core/modules/material.module';
+import { EffectsModule } from '@ngrx/effects';
+import { UserEffects } from './state/user/user.effects';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { MaterialModule } from './core/modules/material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    appStoreModule
+    appStoreModule,
+    EffectsModule.forRoot([UserEffects])
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent]

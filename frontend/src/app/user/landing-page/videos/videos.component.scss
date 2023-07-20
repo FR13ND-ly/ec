@@ -1,0 +1,24 @@
+:host {
+  display: grid;
+  grid-template-columns: 70% auto;
+  gap: var(--gap);
+  height: 80vh;
+}
+
+.video {
+  background-color: var(--surface-color);
+  height: 100%;
+  border-radius: var(--radius);
+}
+
+.videos-wrapper {
+  display: grid;
+  gap: var(--gap);
+  overflow: auto;
+  article {
+    height: 7rem;
+    width: 100%;
+    background-color: var(--surface-color);
+    border-radius: var(--radius);
+  }
+}

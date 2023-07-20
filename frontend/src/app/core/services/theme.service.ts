@@ -12,6 +12,7 @@ export class ThemeService {
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
+
   getTheme(): string {
     return this.localStorage.getItem('theme') || this.getUserPreferences();
   }

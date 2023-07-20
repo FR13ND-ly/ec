@@ -1,10 +1,9 @@
 :host {
     display: grid;
-    grid-template-rows: 72% auto;
+    grid-template-rows: 70% auto;
     gap: var(--gap);
     width: 100%;
     height: calc((100vh - var(--u-header-height)) - var(--gap) * 3);
-    
 }
 
 .slider {

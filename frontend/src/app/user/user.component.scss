@@ -3,13 +3,14 @@
     flex-direction: column;
     box-sizing: border-box;
     position: relative;
-    padding: 
-        calc(var(--u-header-height) + var(--gap) * 2) 
-        var(--lat-padding) 
+    padding:
+        calc(var(--u-header-height) + var(--gap) * 2)
+        var(--lat-padding)
         0;
     min-height: 100vh;
 }
 
 main {
-    flex: 1;
+  flex: 1;
+  margin-bottom: var(--gap);
 }
