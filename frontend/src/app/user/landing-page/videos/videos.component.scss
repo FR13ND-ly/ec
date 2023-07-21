@@ -1,5 +1,11 @@
 :host {
   display: grid;
+  gap: var(--gap);
+  position: relative;
+}
+
+.wrapper {
+  display: grid;
   grid-template-columns: 70% auto;
   gap: var(--gap);
   height: 80vh;
@@ -9,6 +15,18 @@
   background-color: var(--surface-color);
   height: 100%;
   border-radius: var(--radius);
+}
+
+.btn {
+  background-color: var(--surface-color);
+  border-radius: var(--radius);
+  padding: .8rem 1.2rem;
+  width: fit-content;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .videos-wrapper {
