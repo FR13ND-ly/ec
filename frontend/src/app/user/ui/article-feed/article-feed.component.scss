@@ -1,5 +1,11 @@
 :host {
     display: flex;
-    width: 100%;
+    box-sizing: border-box;
+    width: calc(100% - 2rem);
     background-color: var(--surface-color);
+    position: absolute;
+    left: 1rem;
+    border-radius: var(--radius);
+    padding: 0 calc(var(--lat-padding) - 1rem);
+    height: var(--feed-height);
 }

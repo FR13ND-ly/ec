@@ -10,6 +10,6 @@ export class ArticlesWrapperComponent implements OnInit {
   articles : number[] = []
 
   ngOnInit(): void {
-    this.articles.push(1)
+    this.articles.push(1, 2)
   }
 }
