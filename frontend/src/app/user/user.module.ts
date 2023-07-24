@@ -16,7 +16,7 @@ import { UserRoutingModule } from './user-routing.module';
     UserSidebarComponent,
     UserComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,27 @@
+<ng-container *ngIf="type == 'a'">
+    <section class="typeA">
+        <h1>{{ title }}</h1>
+        <h2>{{ subtitle }}</h2>
+        <img [src]="image">
+    </section>
+</ng-container>
+<ng-container *ngIf="type == 'b'">
+    <section class="typeB">
+        <div>
+            <h1>{{ title }}</h1>
+            <h2>{{ subtitle }}</h2>
+        </div>
+        <div class="darken"></div>
+        <img [src]="image">
+    </section>
+</ng-container>
+<ng-container *ngIf="type == 'c'">
+    <section class="typeC">
+        <div>
+            <h1>{{ title }}</h1>
+            <h2>{{ subtitle }}</h2>
+        </div>
+        <img [src]="image">
+    </section>
+    <hr>
+</ng-container>

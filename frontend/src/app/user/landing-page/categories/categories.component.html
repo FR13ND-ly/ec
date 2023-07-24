@@ -2,6 +2,7 @@
   <span class="category" [class.category--selected]="selectedIndex$() == i" (click)="onSelectCategory(i)" *ngFor="let category of categories; let i = index">
     {{ category.showName }}
   </span>
+  <span class="category" routerLink="/avize">Avize</span>
 </section>
 <section class="articles">
   <article class="feature"></article>

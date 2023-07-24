@@ -1,5 +1,5 @@
 <div class="sidebar-overlay" [class.open]="open" (click)="onToggleSidebar($event)" #userOverlay>
-    <div class="content">
+    <div class="content" *ngIf="authenticated$ | async else auth">
         <div class="user-info-wrapper">
             <img class="avatar" src="https://curiodyssey.org/wp-content/uploads/bb-plugin/cache/Mammals-Raccoon-square-52c9ad2f0a59d708f8ea24ef926b0caf-58c5dbcca8b6f.jpg">
             <section class="user-info">
@@ -8,9 +8,22 @@
             </section>
         </div>
         <ul>
-            <li class="item"></li>
-            <li class="item"></li>
-            <li class="item"></li>
+            <section>
+                <li routerLink="/utilizator/id/{{ item.link }}" (click)="onNavigate()" routerLinkActive="active" *ngFor="let item of items">
+                    <mat-icon>{{item.icon}}</mat-icon>{{ item.name }}
+                </li>
+            </section>
+            <li (click)="onLogout()"><mat-icon>logout</mat-icon>Delogare</li>
         </ul>
     </div>
 </div>
+
+<ng-template #auth>
+    <div class="auth-wrapper">
+        <span>Autentificare</span>
+        <section>
+            <button (click)="onAuth('google')">login with google</button>
+            <button (click)="onAuth('facebook')">login with facebook</button>
+        </section>
+    </div>
+</ng-template>

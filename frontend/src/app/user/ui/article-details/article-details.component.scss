@@ -1,5 +1,24 @@
 :host {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    padding-bottom: 1rem;
+    position: relative;
 }
+
+.article-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    gap: 3rem;
+    
+}
+
+.article-content:not(:has(article-chapters)) {
+    display: flex;
+    padding: 0 15%;
+    article-actions {
+        position: absolute;
+    }
+}
+

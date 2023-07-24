@@ -1,1 +1,6 @@
-<p>article-details works!</p>
+<article-header [type]="article.headerType" [title]="article.title" [subtitle]="article.subtitle" [image]="article.image"></article-header>
+<div class="article-content">
+    <article-actions />
+    <article-text [text]="article.text" />
+    <article-chapters *ngIf="article.chapters"/>
+</div>
