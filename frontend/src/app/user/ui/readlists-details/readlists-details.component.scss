@@ -1,0 +1,124 @@
+$max-height: 80vh;
+$header-height: 20vh;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    right: var(--lat-padding);
+    top: calc(var(--u-header-height) + var(--gap));
+    width: 100%;   
+    height: fit-content;
+    max-height: $max-height;
+    background-color: var(--surface-color);
+    border-radius: 1rem; 
+    position: sticky;
+    
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem
+}
+
+.close {
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+}
+
+.articles-count {
+    position: absolute;
+    font-weight: bold;
+    left: 1rem;
+    bottom: 1rem;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: $header-height;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+        filter: brightness(.4);
+    }
+    span {
+        font-size: 2rem;
+        font-weight: bold;
+        position: absolute;
+        z-index: 2;
+    }
+    .actions {
+        display: flex;
+        gap: 1rem;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    max-height: calc($max-height - $header-height - 2rem);
+    overflow-y: scroll;
+    padding-right: .5rem;
+}
+
+.article {
+    display: grid;
+    grid-template-columns: 30% auto;
+    background-color: var(--wash);
+    border-radius: 1rem;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+    }   
+}
+.article-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: .8rem 1rem;
+    box-sizing: border-box;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    gap: .8rem;
+    .article-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+.article-actions {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    mat-icon {
+        font-size: 1.4rem;
+    }
+}

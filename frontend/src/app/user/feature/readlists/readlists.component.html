@@ -1,1 +1,20 @@
-<p>readlists works!</p>
+<button class="add">add readlists</button>
+<div class="content">
+    <div class="primary">
+        <section class="lists">
+            <div class="list" *ngFor="let list of readlists$ | async; let i = index">
+                <section class="list__header">
+                    <span>{{ list.title }}</span>
+                    <button (click)="onSelectList(i)">Vezi tot</button>
+                </section>
+                <section class="list__wrapper">
+                    <article *ngFor="let article of list.articles.slice(0, 4)" class="article">
+                        <img [src]="article.image">
+                        <span>{{ article.title }}</span>
+                    </article>
+                </section>
+            </div>
+        </section>
+    </div>
+    <list-details (close)="onCloseList()" [list]="list" *ngIf="selectedList$ | async as list"></list-details>
+</div>

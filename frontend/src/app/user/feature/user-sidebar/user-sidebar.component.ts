@@ -22,7 +22,7 @@ export class UserSidebarComponent {
 
   items = [
     { name: 'Dashboard', icon: 'dashboard', link: 'dashboard' },
-    { name: 'Readliste', icon: 'book', link: 'readliste' },
+    { name: 'Bibliotecă', icon: 'book', link: 'readliste' },
     { name: 'Setari', icon: 'settings', link: 'setari' },
   ]
 

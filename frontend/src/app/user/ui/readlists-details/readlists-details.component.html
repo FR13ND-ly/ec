@@ -1,0 +1,29 @@
+<div class="header">
+    <img  [src]="list.articles[0].image">
+    <span>{{ list.title }} <mat-icon>edit</mat-icon></span>
+    <p class="articles-count">{{ list.articles.length }} articole</p>
+    <mat-icon class="close" (click)="onCloseList()">close</mat-icon>
+    <section class="actions">
+        <mat-icon>bookmark</mat-icon>
+        <mat-icon>public</mat-icon>
+        <mat-icon>delete</mat-icon>
+    </section>
+</div>
+<div class="content">
+    <section class="articles">
+        <article *ngFor="let article of list.articles" class="article">
+            <img [src]="article.image">
+            <div class="article-content">
+                <div class="info">
+                    <span class="article-title">{{ article.title }}</span>
+                    <span>5 min în urmă</span>
+                </div>
+                <div class="article-actions">
+                    <mat-icon>link</mat-icon>
+                    <mat-icon>content_copy</mat-icon>
+                    <mat-icon>delete</mat-icon>
+                </div>
+            </div>
+        </article>
+    </section>
+</div>
