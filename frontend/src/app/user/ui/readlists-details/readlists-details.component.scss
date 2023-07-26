@@ -7,13 +7,13 @@ $header-height: 20vh;
     overflow: hidden;
     right: var(--lat-padding);
     top: calc(var(--u-header-height) + var(--gap));
-    width: 100%;   
+    width: 100%;
     height: fit-content;
     max-height: $max-height;
     background-color: var(--surface-color);
-    border-radius: 1rem; 
+    border-radius: 1rem;
     position: sticky;
-    
+
 }
 
 .content {
@@ -50,7 +50,7 @@ $header-height: 20vh;
         filter: brightness(.4);
     }
     span {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: bold;
         position: absolute;
         z-index: 2;
@@ -77,6 +77,7 @@ $header-height: 20vh;
     gap: var(--gap);
     max-height: calc($max-height - $header-height - 2rem);
     overflow-y: scroll;
+    overflow-x: hidden;
     padding-right: .5rem;
 }
 
@@ -90,7 +91,7 @@ $header-height: 20vh;
         height: 100%;
         object-fit: cover;
         border-radius: 1rem;
-    }   
+    }
 }
 .article-content {
     display: flex;

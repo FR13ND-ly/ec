@@ -1,6 +1,9 @@
 <div class="sidebar-overlay" [class.open]="open" #searchOverlay>
-    <div (click)="onToggleSidebar($event)">x</div>
+    <div class="close" (click)="onToggleSidebar($event)"><mat-icon>close</mat-icon></div>
     <div class="main">
-        <h1>Bla bla</h1>
+        <input placeholder="Search">
+        <section class="articles-wrapper">
+          <article></article>
+        </section>
     </div>
 </div>

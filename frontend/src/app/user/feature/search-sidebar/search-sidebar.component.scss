@@ -1,17 +1,33 @@
 .sidebar-overlay {
     display: none;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #cccccc56;
+    background-color: var(--surface-color);
     z-index: 999999;
     &--open {
         display: block!important;
     }
 }
 
+.main {
+  margin-top: 20%;
+  transition: .2s;
+  &:has(input:not(:placeholder-shown)), &:has(input:focus) {
+    margin-top: 10%;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  transform: scale(2);
+}
+
 .open {
-    display: block;
+    display: flex;
 }

@@ -1,10 +1,26 @@
-<button class="add">add readlists</button>
 <div class="content">
     <div class="primary">
+      <div class="user" *ngIf="user$ | async as user">
+        <div class="info">
+          <img [src]="user.image">
+          <div>
+            <h1>{{ user.name }}</h1>
+            <section>
+              <span><b>{{ user.listsCount }}</b> like-uri</span>|
+              <span><b>{{ user.readed }}</b> liste</span>|
+              <span><b>{{ user.likes }}</b> articole citite</span>
+            </section>
+          </div>
+        </div>
+        <button class="add"><mat-icon>add</mat-icon></button>
+      </div>
         <section class="lists">
             <div class="list" *ngFor="let list of readlists$ | async; let i = index">
                 <section class="list__header">
-                    <span>{{ list.title }}</span>
+                    <span>
+                      <mat-icon>{{ list.icon }}</mat-icon>
+                      {{ list.title }}
+                    </span>
                     <button (click)="onSelectList(i)">Vezi tot</button>
                 </section>
                 <section class="list__wrapper">

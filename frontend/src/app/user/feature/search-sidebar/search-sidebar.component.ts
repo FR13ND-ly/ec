@@ -1,5 +1,6 @@
-import { Component, ElementRef, Input, ViewChild, inject } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild, inject, OnChanges } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { timer } from 'rxjs';
 import { AppState } from 'src/app/state/app.store';
 import { toggleSearchSidebar } from 'src/app/state/search/search.actions';
 
@@ -10,14 +11,13 @@ import { toggleSearchSidebar } from 'src/app/state/search/search.actions';
 })
 export class SearchSidebarComponent {
 
-  @ViewChild('searchOverlay') overlayRef!: ElementRef
+  @ViewChild('searchOverlay') overlayRef!: ElementRef<HTMLDivElement>
 
-  @Input() open!: boolean | null 
+  @Input() open!: boolean | null
 
   store = inject(Store<AppState>)
 
   onToggleSidebar(e : Event) {
-    // if (e.target != this.overlayRef.nativeElement) return
     this.store.dispatch(toggleSearchSidebar())
   }
 }

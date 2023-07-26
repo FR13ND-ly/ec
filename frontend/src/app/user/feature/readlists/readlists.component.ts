@@ -8,11 +8,21 @@ import { BehaviorSubject, map, of, switchMap } from 'rxjs';
 })
 export class ReadlistsComponent {
 
+  user$ = of({
+    id: 1,
+    name: 'Motricala Alin',
+    image: 'https://curiodyssey.org/wp-content/uploads/bb-plugin/cache/Mammals-Raccoon-square-52c9ad2f0a59d708f8ea24ef926b0caf-58c5dbcca8b6f.jpg',
+    readed: 55,
+    likes: 12,
+    listsCount: 3,
+  })
+
   readlists$ = of([
     {
       id: 1,
       title: 'Readlist 1',
       description: 'Description 1',
+      icon: 'bookmark',
       articles: [
         {
           url: 1,
@@ -60,6 +70,7 @@ export class ReadlistsComponent {
       id: 2,
       title: 'Readlist 2',
       description: 'Description 2',
+      icon: 'bookmark',
       articles: [
         {
           url: 1,
@@ -87,6 +98,7 @@ export class ReadlistsComponent {
       id: 2,
       title: 'Readlist 2',
       description: 'Description 2',
+      icon: 'bookmark',
       articles: [
         {
           url: 1,
@@ -114,6 +126,7 @@ export class ReadlistsComponent {
       id: 2,
       title: 'Readlist 2',
       description: 'Description 2',
+      icon: 'bookmark',
       articles: [
         {
           url: 1,
@@ -141,6 +154,7 @@ export class ReadlistsComponent {
       id: 2,
       title: 'Readlist 2',
       description: 'Description 2',
+      icon: 'bookmark',
       articles: [
         {
           url: 1,

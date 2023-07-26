@@ -2,6 +2,7 @@ import { Component, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/core/modules/material.module';
 import { EventEmitter } from '@angular/core';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'list-details',
